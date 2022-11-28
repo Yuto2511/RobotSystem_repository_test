@@ -28,8 +28,6 @@ out=$(echo "/ 1 2" < test_nums | ./four_arithmetic_operations)
 [ "${out}" = 1.5 ] || ng ${LINENO}
 
 ### STRANGE INPUT ###
-
-### STRANGE INPUT ###
 ### plus ###
 out=$(echo あ | ./plus)
 [ "$?" = 1 ] 	  || ng ${LINENO}
@@ -40,8 +38,8 @@ out=$(echo | ./plus)
 [ "${out}" = "" ] || ng ${LINENO}
 
 ### four arithmetic operations ###
-out=$(seq 5 | ./four_arithmetic_operations)
-[ "$?" = 1 ] 	  || ng ${LINENO}
+#out=$(seq 5 | ./four_arithmetic_operations)
+#[ "$?" = 1 ] 	  || ng ${LINENO}
 #[ "${out}" = "" ] || ng ${LINENO}
 
 [ "$res" = 0 ] && echo OK
