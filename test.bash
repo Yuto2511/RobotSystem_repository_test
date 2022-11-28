@@ -27,6 +27,9 @@ out=$(echo "* 1 2 3" < test_nums | ./four_arithmetic_operations)
 out=$(echo "/ 1 2" < test_nums | ./four_arithmetic_operations)
 [ "${out}" = 0.5 ] || ng ${LINENO}
 
+out=$(echo "1 2 3" < test_nums | ./four_arithmetic_operations)
+[ "${out}" = "INPUT ERROR!" ] || ng ${LINENO}
+
 ### STRANGE INPUT ###
 ### plus ###
 out=$(echo あ | ./plus)
