@@ -30,10 +30,6 @@ out=$(echo "/ 1 2" | ./cal_up)
 out=$(echo "1 2 3" | ./cal_up)
 [ "${out}" = "INPUT ERROR!" ] || ng ${LINENO}
 
-### todays_dinner ###
-out=$(./todays_dinner)
-[ "$?" = 0 ]	|| ng ${LINENO}
-
 ### STRANGE INPUT ###
 ### plus ###
 out=$(echo あ | ./plus)
