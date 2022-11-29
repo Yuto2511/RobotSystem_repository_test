@@ -14,7 +14,7 @@ res=0
 out=$(seq 5 | ./plus)
 [ "${out}" = 15 ] || ng ${LINENO}
 
-### four arithmetic operations ###
+### cal_up ###
 out=$(echo "+ 1 2 3" | ./cal_up)
 [ "${out}" = 6.0 ] || ng ${LINENO}
 
@@ -30,6 +30,10 @@ out=$(echo "/ 1 2" | ./cal_up)
 out=$(echo "1 2 3" | ./cal_up)
 [ "${out}" = "INPUT ERROR!" ] || ng ${LINENO}
 
+### todays_dinner ###
+out=$(./todays_dinner)
+[ "$?" = 0 ]	|| ng ${LINENO}
+
 ### STRANGE INPUT ###
 ### plus ###
 out=$(echo あ | ./plus)
@@ -40,11 +44,9 @@ out=$(echo | ./plus)
 [ "$?" = 1 ] 	  || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-### four arithmetic operations ###
+### cal_up ###
 out=$(seq 5 | ./cal_up)
 [ "$?" = 1 ] 	  || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
-
-[ "$res" = 0 ] && echo OK
 
 exit $res
