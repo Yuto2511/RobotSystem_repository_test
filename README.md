@@ -57,7 +57,7 @@ $ echo "* 1 2 3" | /.cal_up
 ```
 
 ```shell
-$ echo "+ 1 2" | /.cal_up
+$ echo "/ 1 2" | /.cal_up
 0.5
 ```
 
