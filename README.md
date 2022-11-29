@@ -17,7 +17,7 @@
 
 これらのコマンドを使用するには、このリポジトリを適当な場所にクローンしてください.
 
-```
+```shell
 git clone https://github.com/Yuto2511/robosys2022.git
 cd robosys2022
 ```
@@ -28,7 +28,7 @@ cd robosys2022
 
 ### 使い方
 
-```
+```shell
 $ seq 5 | ./plus
 15
 ```
@@ -41,22 +41,22 @@ $ seq 5 | ./plus
 
 1文字めに演算子、次に数字を入力します。
 
-```
+```shell
 $ echo "+ 1 2 3" | /.cal_up
 6.0
 ```
 
-```
+```shell
 $ echo "- 1 2 3" | /.cal_up
 -6.0
 ```
 
-```
+```shell
 $ echo "* 1 2 3" | /.cal_up
 6.0
 ```
 
-```
+```shell
 $ echo "+ 1 2" | /.cal_up
 0.5
 ```
