@@ -15,19 +15,19 @@ out=$(seq 5 | ./plus)
 [ "${out}" = 15 ] || ng ${LINENO}
 
 ### four arithmetic operations ###
-out=$(echo "+ 1 2 3" < test_nums | ./four_arithmetic_operations)
+out=$(echo "+ 1 2 3" | ./cal_up)
 [ "${out}" = 6.0 ] || ng ${LINENO}
 
-out=$(echo "- 1 2 3" < test_nums | ./four_arithmetic_operations)
+out=$(echo "- 1 2 3" | ./cal_up)
 [ "${out}" = -6.0 ] || ng ${LINENO}
 
-out=$(echo "* 1 2 3" < test_nums | ./four_arithmetic_operations)
+out=$(echo "* 1 2 3" | ./cal_up)
 [ "${out}" = 6.0 ] || ng ${LINENO}
 
-out=$(echo "/ 1 2" < test_nums | ./four_arithmetic_operations)
+out=$(echo "/ 1 2" | ./cal_up)
 [ "${out}" = 0.5 ] || ng ${LINENO}
 
-out=$(echo "1 2 3" < test_nums | ./four_arithmetic_operations)
+out=$(echo "1 2 3" | ./cal_up)
 [ "${out}" = "INPUT ERROR!" ] || ng ${LINENO}
 
 ### STRANGE INPUT ###
@@ -41,7 +41,7 @@ out=$(echo | ./plus)
 [ "${out}" = "" ] || ng ${LINENO}
 
 ### four arithmetic operations ###
-out=$(seq 5 | ./four_arithmetic_operations)
+out=$(seq 5 | ./cal_up)
 [ "$?" = 1 ] 	  || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
