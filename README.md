@@ -66,7 +66,7 @@ $ echo "+ 1 2" | /.cal_up
 ## todays_dinner
 
 「今日の晩御飯が決められない！」というときに使うコマンドです。
-「dinner_list.txt」からランダムで晩御飯を決めてくれます。
+「[dinner_list.txt](https://github.com/Yuto2511/robosys2022/blob/dev/dinner_list.txt)」からランダムで晩御飯を決めてくれます。
 
 ### 使い方
 
