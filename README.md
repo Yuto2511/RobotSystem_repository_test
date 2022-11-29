@@ -8,6 +8,8 @@
 
 [cal_up](#cal_up)
 
+[todays_dinner](#todays_dinner)
+
 ## 動作確認済み環境
 
 - OS: Ubuntu 20.04
@@ -61,6 +63,17 @@ $ echo "+ 1 2" | /.cal_up
 0.5
 ```
 
+## todays_dinner
+
+「今日の晩御飯が決められない！」というときに使うコマンドです。
+「dinner_list.txt」からランダムで晩御飯を決めてくれます。
+
+### 使い方
+
+```shell
+$ ./todays_dinner
+オムライス
+```
 
 ## ライセンス
 
